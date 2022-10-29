@@ -6,13 +6,13 @@ export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "misaka10843",
+    url: "https://misaka.sakurakoyi.top",
   },
 
   iconAssets: "fontawesome",
 
-  logo: "/logo.svg",
+  logo: "/favicon.ico",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -118,39 +118,7 @@ export default hopeTheme({
       cacheHTML: true,
       cachePic: true,
       appendBase: true,
-      apple: {
-        icon: "/assets/icon/apple-icon-152.png",
-        statusBarColor: "black",
-      },
-      msTile: {
-        image: "/assets/icon/ms-icon-144.png",
-        color: "#ffffff",
-      },
       manifest: {
-        icons: [
-          {
-            src: "/assets/icon/chrome-mask-512.png",
-            sizes: "512x512",
-            purpose: "maskable",
-            type: "image/png",
-          },
-          {
-            src: "/assets/icon/chrome-mask-192.png",
-            sizes: "192x192",
-            purpose: "maskable",
-            type: "image/png",
-          },
-          {
-            src: "/assets/icon/chrome-512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-          {
-            src: "/assets/icon/chrome-192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-        ],
         shortcuts: [
           {
             name: "Demo",

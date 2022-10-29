@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 项目主页
-heroImage: /logo.svg
+heroImage: /logo.png
 heroText: 芳文狂想曲
 tagline: 一款芳文社的同人游戏
 actions:
