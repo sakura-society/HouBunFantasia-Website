@@ -1,8 +1,7 @@
 ---
-title: 指南
-icon: creative
+title: 开发文档
+icon: square-plus
 ---
-
 ## 功能亮点
 
 ### Bar

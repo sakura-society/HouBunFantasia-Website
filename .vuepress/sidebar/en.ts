@@ -4,18 +4,19 @@ export const enSidebar = sidebar({
   "/en/": [
     "",
     {
-      icon: "discover",
-      text: "Demo",
-      prefix: "demo/",
-      link: "demo/",
+      icon: "discourse",
+      text: "Course",
+      prefix: "course/",
+      link: "course/",
       children: "structure",
     },
     {
       text: "Docs",
-      icon: "note",
+      icon: "book",
       prefix: "guide/",
+      link: "guide/",
       children: "structure",
     },
-    "slides",
+    "schedule",
   ],
 });
