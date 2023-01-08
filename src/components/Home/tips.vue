@@ -25,6 +25,7 @@
                         </p>
                         <h3>
                           <span style="color:#FFF;">
+                            <!--todo 添加随机输出条目，但是还要考虑i18n问题-->
                             注意！有饱腹度设定哦，在饱腹度为0时吃下的料理效果会变成1.5倍，在饱腹度接近满值时吃下的料理只会有一部分效果发挥出来。
                           </span>
                         </h3>
@@ -340,12 +341,6 @@ export default {
 
 .one-second.column {
   width: 50%
-}
-
-body .button {
-  color: #fff;
-  background-color: #6cf;
-  border-color: #6cf
 }
 
 .button.has-icon {

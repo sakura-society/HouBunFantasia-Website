@@ -2,9 +2,6 @@
   <div>
     <VueNavUI :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
       <img class="img" src="./assets/logo.png" alt="" srcset="" />
-      <template #btnPrepend>
-        <img class="img" src="./assets/logo.png" alt="" srcset="" />
-      </template>
     </VueNavUI>
     <router-view />
     <Footer></Footer>
@@ -47,18 +44,18 @@ export default defineComponent({
     ]);
     const navConfig = ref({
       whitespace: true,
-      navBg: "#FAFAFA",
-      navBorderRadius: "30px",
+      navBg: "#292b32",
+      navBorderRadius: "0px",
       linkFont: "poppins",
-      linkColor: "black",
+      linkColor: "#fff",
       responsivePosition: "top",
     });
 
     const btnConfig = ref({
-      btnLink: false,
-      btnUrl: "https://dhaniel.disha.page",
-      btnText: "Download app",
-      btnBg: "#40269E",
+      btnLink: true,
+      btnUrl: "https://kirara.sakurakoi.top/download",
+      btnBg: "#003e8f",
+      btnText: "ο(=•ω＜=)ρ⌒☆",
       btnTextColor: "white",
       btnBorderWidth: "0",
       btnBorderColor: "black",
@@ -71,6 +68,6 @@ export default defineComponent({
   },
 });
 </script>
-<style>
+<style scoped>
 
 </style>

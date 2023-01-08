@@ -12,10 +12,7 @@
             <div class="mcb-column-inner mcb-column-inner mcb-item-column-inner">
               <div class="column_attr mfn-inline-editor clearfix mobile_align_center" style="">
                 <h2>
-                  相关
-                  <span class="themecolor">
-                    人员
-                  </span>
+                  相关<span class="themecolor">人员</span>
                 </h2>
               </div>
             </div>

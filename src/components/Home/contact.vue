@@ -179,11 +179,7 @@ export default {
   width: 40%
 }
 
-body .button {
-  color: #fff;
-  background-color: #6cf;
-  border-color: #6cf
-}
+
 
 @media only screen and (max-width:767px) {
 

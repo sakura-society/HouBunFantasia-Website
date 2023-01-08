@@ -5,12 +5,26 @@
 .excess {
   height: 0px !important;
 }
+.link {
+  transition: all ease-in-out 0.2s;
+}
 
+.link:hover {
+  color: var(--mfn-clients-tiles-hover);
+}
 body {
   margin: 0;
   padding: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
 }
-
+body .button {
+  color: #fff;
+  background-color: #348cff;
+  border-color: #348cff
+}
 body {
   background-color: #fff;
   --mfn-column-gap-top: 0;
@@ -316,6 +330,12 @@ h4,
     font-weight: 700;
     letter-spacing: 0;
   }
+  h1, .text-logo #logo {
+    font-size: 48px !important;
+    line-height: 51px!important;
+    font-weight: 800!important;
+    letter-spacing: 0!important;
+}
 }
 
 .themecolor,
@@ -655,4 +675,13 @@ ul {
     font-weight: 400;
     letter-spacing: 0;
   }
+}
+h1, h1 a, h1 a:hover, .text-logo #logo {
+  color: #fff;
+}
+h1, .text-logo #logo {
+  font-size: 80px;
+  line-height: 85px;
+  font-weight: 800;
+  letter-spacing: 0;
 }

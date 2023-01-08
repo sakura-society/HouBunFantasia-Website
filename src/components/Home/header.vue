@@ -65,7 +65,7 @@ export default {
 @media only screen and (max-width:767px) {
   .rev-btn {
     z-index: 10;
-    background-color: rgb(102, 204, 255);
+    background-color: #348cff;
     font-family: Inter;
     height: auto;
     width: auto;
@@ -114,7 +114,7 @@ export default {
 @media only screen and (min-width:767px) {
   .rev-btn {
     z-index: 10;
-    background-color: rgb(102, 204, 255);
+    background-color: #348cff;
     font-family: Inter;
     height: auto;
     width: auto;

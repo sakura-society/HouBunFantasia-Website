@@ -18,8 +18,7 @@
                 <hr class="no_line" style="margin: 0 auto 10px auto" />
                 <p></p>
                 <h2>
-                  <span class="themecolor"> 官方 </span>
-                  社区
+                  <span class="themecolor">官方</span>社区
                 </h2>
               </div>
             </div>
