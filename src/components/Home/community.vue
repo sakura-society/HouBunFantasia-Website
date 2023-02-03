@@ -24,34 +24,20 @@
             </div>
           </div>
           <div class="column mcb-column mcb-item one tablet-one mobile-one column_slider" style="">
-            <div class="mcb-column-inner mcb-column-inner mcb-item-slider-inner">
-              <div class="content_slider carousel">
-                <ul class="content_slider_ul slick-initialized slick-slider">
-                  <div class="slick-list draggable">
-                    <div class="slick-track" style="
-                        opacity: 1;
-                        width: 1128px;
-                        transform: translate3d(0px, 0px, 0px);
-                      ">
-                      <div v-for="community in communitys" v-bind:key="community"
-                        class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"
-                        style="width: 376px">
-                        <div>
-                          <li class="content_slider_li_1" style="width: 100%; display: inline-block">
-                            <a :href="community.url" target="_blank" tabindex="0">
-                              <img width="1630" height="860" :src="community.ProPho" class="scale-with-grid post-image"
-                                alt="" />
-                              <p class="title">
-                                {{ community.name }}
-                              </p>
-                            </a>
-                          </li>
-                        </div>
-                      </div>
-                    </div>
+            <div class="cardListContainer">
+              <div class="card-list">
+                <a v-for="community in communitys" v-bind:key="community" :href="community.url" target="_blank"
+                  class="card-item row-3" style="background-color:#f1f1f1;--random-color:#f1f1f1;color:#2A3344;">
+                  <img :src="community.ProPho">
+                  <div>
+                    <p class="name">
+                      <strong>{{ community.name }}</strong>
+                    </p>
+                    <p class="desc">
+                      {{ community.desc }}
+                    </p>
                   </div>
-                </ul>
-                <div class="slider_pager slider_pagination"></div>
+                </a>
               </div>
             </div>
           </div>
@@ -71,17 +57,20 @@ export default {
           url: "https://pd.qq.com/s/egfs0th8i",
           ProPho:
             "https://44422.jx1639.com/iefans/images/2022-01-29/61f4b75ed03b9.jpeg",
+          desc: "为中国大陆的用户提供类Discord的社区！"
         },
         {
           name: "樱雪论坛",
           url: "https://forum.sakurakoi.top",
           ProPho: "/image/sakurasnow.svg",
+          desc: "官方论坛！"
         },
         {
           name: "Discord",
           url: "https://discord.gg/qe8kv5avvV",
           ProPho:
             "https://blog.osk.de/wp-content/uploads/2021/01/OSK-Blog_Discord-Guide_1280x480px.jpg",
+          desc: "虽然这是一个理想社区，但是团队成员可能不会经常上！"
         },
       ],
     };
@@ -90,6 +79,305 @@ export default {
 </script>
 
 <style scoped>
+.center-container {
+  text-align: center
+}
+
+.center-container>h1,
+.center-container>h2,
+.center-container>h3,
+.center-container>h4,
+.center-container>h5,
+.center-container>h6 {
+  margin-top: -3.1rem;
+  padding-top: 4.6rem;
+  margin-bottom: 0
+}
+
+.center-container>h1 a.header-anchor,
+.center-container>h2 a.header-anchor,
+.center-container>h3 a.header-anchor,
+.center-container>h4 a.header-anchor,
+.center-container>h5 a.header-anchor,
+.center-container>h6 a.header-anchor {
+  float: none;
+  padding-right: 0;
+  margin-left: -.9rem
+}
+
+.cardListContainer {
+  margin: .7rem 0
+}
+
+.cardListContainer>:not(.card-list) {
+  display: none
+}
+
+.cardListContainer .card-list {
+  margin: -.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start
+}
+
+.cardListContainer .card-list .card-item {
+  width: calc(33.33333% - .7rem);
+  margin: .35rem;
+  background: var(--bodyBg);
+  border-radius: 3px;
+  color: var(--textColor);
+  display: flex;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .06);
+  transition: all .4s
+}
+
+.cardListContainer .card-list .card-item:hover {
+  text-decoration: none;
+  box-shadow: 0 10px 20px -10px var(--randomColor, rgba(0, 0, 0, .15));
+  transform: translateY(-3px) scale(1.01)
+}
+
+.cardListContainer .card-list .card-item:hover img {
+  box-shadow: 3px 2px 7px rgba(0, 0, 0, .15)
+}
+
+.cardListContainer .card-list .card-item:hover div p {
+  text-shadow: 3px 2px 5px rgba(0, 0, 0, .15)
+}
+
+.cardListContainer .card-list .card-item img {
+  width: 160px;
+  height: 60px;
+  border-radius: 10%;
+  border: 2px solid #fff;
+  margin: 1rem 0 1rem 1rem;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, .08);
+  transition: all .4s
+}
+
+.cardListContainer .card-list .card-item div {
+  flex: 1;
+  display: inline-block;
+  float: right;
+  padding: 1rem 0
+}
+
+.cardListContainer .card-list .card-item div p {
+  margin: 0;
+  padding: 0 1rem;
+  transition: text-shadow .4s;
+  text-align: center
+}
+
+.cardListContainer .card-list .card-item div .name {
+  margin: .2rem 0 .3rem
+}
+
+.cardListContainer .card-list .card-item div .desc {
+  font-size: .8rem;
+  line-height: 1.1rem;
+  opacity: .8;
+  margin-bottom: .2rem
+}
+
+.cardListContainer .card-list .card-item.row-1 {
+  width: calc(100% - .7rem)
+}
+
+.cardListContainer .card-list .card-item.row-1 img {
+  margin-left: 2rem
+}
+
+.cardListContainer .card-list .card-item.row-2 {
+  width: calc(50% - .7rem)
+}
+
+.cardListContainer .card-list .card-item.row-2 img {
+  margin-left: 1.5rem
+}
+
+.cardListContainer .card-list .card-item.row-3 {
+  width: calc(33.33333% - .7rem)
+}
+
+.cardListContainer .card-list .card-item.row-4 {
+  width: calc(25% - .7rem)
+}
+
+.cardImgListContainer {
+  margin: 1rem 0
+}
+
+.cardImgListContainer>:not(.card-list) {
+  display: none
+}
+
+.cardImgListContainer .card-list {
+  margin: -.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start
+}
+
+.cardImgListContainer .card-list .card-item {
+  width: calc(33.33333% - 1rem);
+  margin: .5rem;
+  background: var(--mainBg);
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  border-radius: 3px;
+  overflow: hidden;
+  color: var(--textColor);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .04);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  transition: all .4s
+}
+
+.cardImgListContainer .card-list .card-item:hover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, .1);
+  transform: translateY(-3px)
+}
+
+.cardImgListContainer .card-list .card-item .box-img {
+  overflow: hidden;
+  position: relative;
+  background: #eee
+}
+
+.cardImgListContainer .card-list .card-item .box-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all .3s
+}
+
+.cardImgListContainer .card-list .card-item a {
+  color: var(--textColor);
+  transition: color .3s
+}
+
+.cardImgListContainer .card-list .card-item a:hover {
+  text-decoration: none
+}
+
+.cardImgListContainer .card-list .card-item .box-info {
+  padding: .8rem 1rem
+}
+
+.cardImgListContainer .card-list .card-item .box-info p {
+  margin: 0
+}
+
+.cardImgListContainer .card-list .card-item .box-info .desc {
+  margin-top: .3rem;
+  opacity: .8;
+  font-size: .9rem;
+  line-height: 1.1rem;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical
+}
+
+.cardImgListContainer .card-list .card-item .box-footer {
+  overflow: hidden;
+  padding: .8rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.cardImgListContainer .card-list .card-item .box-footer img {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  float: left
+}
+
+.cardImgListContainer .card-list .card-item .box-footer span {
+  line-height: 1.8rem;
+  float: left;
+  margin-left: .6rem;
+  font-size: .8rem
+}
+
+.cardImgListContainer .card-list .card-item.row-1 {
+  width: calc(100% - 1rem)
+}
+
+.cardImgListContainer .card-list .card-item.row-2 {
+  width: calc(50% - 1rem)
+}
+
+.cardImgListContainer .card-list .card-item.row-3 {
+  width: calc(33.33333% - 1rem)
+}
+
+.cardImgListContainer .card-list .card-item.row-4 {
+  width: calc(25% - 1rem)
+}
+
+.theme-mode-dark .cardImgListContainer .card-list .card-item,
+.theme-mode-dark .cardImgListContainer .card-list .card-item .box-footer {
+  border-color: var(--borderColor)
+}
+
+@media (max-width:900px) {
+  .cardListContainer .card-list .card-item.row-4 {
+    width: calc(33.33333% - .7rem)
+  }
+
+  .cardImgListContainer .card-list .card-item.row-4 {
+    width: calc(33.33333% - 1rem)
+  }
+}
+
+@media (max-width:720px) {
+
+  .cardListContainer .card-list .card-item.row-3,
+  .cardListContainer .card-list .card-item.row-4 {
+    width: calc(50% - .7rem)
+  }
+
+  .cardListContainer .card-list .card-item.row-3 img,
+  .cardListContainer .card-list .card-item.row-4 img {
+    margin-left: 1.5rem
+  }
+
+  .cardImgListContainer .card-list .card-item.row-3,
+  .cardImgListContainer .card-list .card-item.row-4 {
+    width: calc(50% - 1rem)
+  }
+}
+
+@media (max-width:500px) {
+
+  .cardListContainer .card-list .card-item.row-1,
+  .cardListContainer .card-list .card-item.row-2,
+  .cardListContainer .card-list .card-item.row-3,
+  .cardListContainer .card-list .card-item.row-4 {
+    width: calc(100% - .7rem)
+  }
+
+  .cardListContainer .card-list .card-item.row-1 img,
+  .cardListContainer .card-list .card-item.row-2 img,
+  .cardListContainer .card-list .card-item.row-3 img,
+  .cardListContainer .card-list .card-item.row-4 img {
+    margin-left: 1.5rem
+  }
+
+  .cardImgListContainer .card-list .card-item.row-1,
+  .cardImgListContainer .card-list .card-item.row-2,
+  .cardImgListContainer .card-list .card-item.row-3,
+  .cardImgListContainer .card-list .card-item.row-4 {
+    width: calc(100% - 1rem)
+  }
+}
+
+
 .container,
 .section_wrapper {
   max-width: 1220px;

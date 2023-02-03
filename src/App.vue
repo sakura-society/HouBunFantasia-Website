@@ -1,7 +1,7 @@
 <template>
   <div>
     <VueNavUI :navLinks="navLinks" :navConfig="navConfig" :btnConfig="btnConfig">
-      <img class="img" src="./assets/logo.png" alt="" srcset="" />
+      <img class="img" src="/favicon.ico" alt="" srcset="" />
     </VueNavUI>
     <router-view />
     <Footer></Footer>
@@ -22,25 +22,21 @@ export default defineComponent({
   setup() {
     const navLinks = ref([
       {
-        name: "Home",
+        name: "主页",
         path: "/",
       },
       {
-        name: "About",
+        name: "关于&加入",
         path: "/about",
       },
       {
-        name: "FAQs",
-        path: "/faqs",
+        name: "文档&旧版官网",
+        path: "/docs",
       },
       {
-        name: "More",
-        path: "/more",
-      },
-      {
-        name: "Media",
-        path: "/media",
-      },
+        name: "特别鸣谢",
+        path: "/thanks",
+      }
     ]);
     const navConfig = ref({
       whitespace: true,
@@ -69,5 +65,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-
+.img {
+  width: auto !important;
+}
 </style>

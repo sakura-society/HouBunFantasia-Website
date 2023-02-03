@@ -26,7 +26,7 @@
                         <h3>
                           <span style="color:#FFF;">
                             <!--todo 添加随机输出条目，但是还要考虑i18n问题-->
-                            注意！有饱腹度设定哦，在饱腹度为0时吃下的料理效果会变成1.5倍，在饱腹度接近满值时吃下的料理只会有一部分效果发挥出来。
+                            <div v-html="returnString"></div>
                           </span>
                         </h3>
                         <p>
@@ -78,12 +78,11 @@
       <div class="wrap mcb-wrap mcb-wrap one tablet-one mobile-one valign-top clearfix" data-desktop-col="one"
         data-tablet-col="tablet-one" data-mobile-col="mobile-one" style="">
         <div class="mcb-wrap-inner mcb-wrap-inner">
-          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_hover_color" style="">
-            <div class="mcb-column-inner mcb-column-inner mcb-item-hover_color-inner">
-              <div class="hover_color align_" style="background-color:#494949;border-color:;"
-                ontouchstart="this.classList.toggle('hover');">
-                <div class="hover_color_bg" style="background-color:#494949;border-color:;border-width:;">
-                  <div class="hover_color_wrapper" style="padding:50px 30px 35px;">
+          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_qwq" style="">
+            <div class="mcb-column-inner mcb-column-inner mcb-item-qwq-inner">
+              <div class="qwq">
+                <div class="qwq_bg" style="background-color:#494949;border-color:;border-width:;">
+                  <div class="qwq_wrapper" style="padding:50px 30px 35px;">
                     <img class="scale-with-grid" src="/image/HomeEVENT/2.png" alt="">
                     <hr class="no_line" style="margin: 0 auto 40px auto">
                     <p class="big">
@@ -97,12 +96,11 @@
               </div>
             </div>
           </div>
-          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_hover_color" style="">
-            <div class="mcb-column-inner mcb-column-inner mcb-item-hover_color-inner">
-              <div class="hover_color align_" style="background-color:#ffbf3d;border-color:;"
-                ontouchstart="this.classList.toggle('hover');">
-                <div class="hover_color_bg" style="background-color:#ffcb62;border-color:;border-width:;">
-                  <div class="hover_color_wrapper" style="padding:50px 30px 35px;">
+          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_qwq" style="">
+            <div class="mcb-column-inner mcb-column-inner mcb-item-qwq-inner">
+              <div class="qwq">
+                <div class="qwq_bg" style="background-color:#ffcb62;border-color:;border-width:;">
+                  <div class="qwq_wrapper" style="padding:50px 30px 35px;">
                     <img class="scale-with-grid" src="/image/HomeEVENT/1.png" alt="">
                     <hr class="no_line" style="margin: 0 auto 40px auto">
                     <p class="big">
@@ -122,12 +120,11 @@
               </div>
             </div>
           </div>
-          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_hover_color" style="">
-            <div class="mcb-column-inner mcb-column-inner mcb-item-hover_color-inner">
-              <div class="hover_color align_" style="background-color:#ff4444;border-color:;"
-                ontouchstart="this.classList.toggle('hover');">
-                <div class="hover_color_bg" style="background-color:#ff6060;border-color:;border-width:;">
-                  <div class="hover_color_wrapper" style="padding:50px 30px 35px;">
+          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_qwq" style="">
+            <div class="mcb-column-inner mcb-column-inner mcb-item-qwq-inner">
+              <div class="qwq">
+                <div class="qwq_bg" style="background-color:#0089f7;border-color:;border-width:;">
+                  <div class="qwq_wrapper" style="padding:50px 30px 35px;">
                     <img class="scale-with-grid" src="/image/HomeEVENT/3.png" alt="">
                     <hr class="no_line" style="margin: 0 auto 40px auto">
                     <p class="big">
@@ -143,12 +140,11 @@
               </div>
             </div>
           </div>
-          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_hover_color" style="">
-            <div class="mcb-column-inner mcb-column-inner mcb-item-hover_color-inner">
-              <div class="hover_color align_" style="background-color:#ff0d47;border-color:;"
-                ontouchstart="this.classList.toggle('hover');">
-                <div class="hover_color_bg" style="background-color:#0089f7;border-color:;border-width:;">
-                  <div class="hover_color_wrapper" style="padding:50px 30px 35px;">
+          <div class="column mcb-column mcb-item one-fourth tablet-one-fourth mobile-one column_qwq" style="">
+            <div class="mcb-column-inner mcb-column-inner mcb-item-qwq-inner">
+              <div class="qwq">
+                <div class="qwq_bg" style="background-color:#ff6060;border-color:;border-width:;">
+                  <div class="qwq_wrapper" style="padding:50px 30px 35px;">
                     <img class="scale-with-grid" src="/image/HomeEVENT/4.png" alt="">
                     <hr class="no_line" style="margin: 0 auto 40px auto">
                     <p class="big">
@@ -177,6 +173,29 @@
 
 <script>
 export default {
+  data () {
+    return {
+      tipData: [
+        {
+          cn: "<p>注意！有饱腹度设定哦，在饱腹度低于20%时吃下的料理效果会变成1.5倍，在饱腹度接近满值时吃下的料理只会有0.5倍的效果qwq</p>"
+        },
+        {
+          cn: "<p>这个游戏其实连主策划都没(在2023.1.27时都只有程序一人www)</p>"
+        },
+        {
+          cn: "<p>严重缺人中！</p>"
+        },
+        {
+          cn: "<p>这个游戏在前期受到了<a style=\"color: #348cff\" target=\"_blank\" href=\"https://space.bilibili.com/1585955812\">芳文观星台</a>的很多帮助，请多多支持ta们！</p>"
+        },
+      ],
+      returnString: "<p>严重缺人中！</p>"
+    }
+  },
+
+  created () {
+    this.returnString = this.tipData[Math.round(Math.random() * this.tipData.length)].cn
+  }
 
 }
 </script>
@@ -388,29 +407,29 @@ export default {
   margin: 0
 }
 
-.hover_color,
-.hover_color_bg {
+.qwq,
+.qwq_bg {
   height: 100%
 }
 
-.hover_color,
-.hover_color a,
-.hover_color a:hover,
-.hover_color h1 a,
-.hover_color h2 a,
-.hover_color h3 a,
-.hover_color h4 a,
-.hover_color h5 a,
-.hover_color h6 a {
+.qwq,
+.qwq a,
+.qwq a:hover,
+.qwq h1 a,
+.qwq h2 a,
+.qwq h3 a,
+.qwq h4 a,
+.qwq h5 a,
+.qwq h6 a {
   color: #fff
 }
 
-.hover_color {
+.qwq {
   text-align: center;
   border-color: transparent
 }
 
-.hover_color .hover_color_bg {
+.qwq .qwq_bg {
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
@@ -419,7 +438,7 @@ export default {
   border: 2px solid transparent
 }
 
-.hover_color .hover_color_wrapper {
+.qwq .qwq_wrapper {
   -webkit-transition: all .4s ease-in-out;
   -moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;

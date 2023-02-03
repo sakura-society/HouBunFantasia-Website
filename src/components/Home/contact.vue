@@ -179,7 +179,11 @@ export default {
   width: 40%
 }
 
-
+.button:hover {
+  color: #6babff;
+  background-color: #1b6cd5;
+  border-color: #6babff
+}
 
 @media only screen and (max-width:767px) {
 
