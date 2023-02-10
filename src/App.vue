@@ -49,7 +49,7 @@ export default defineComponent({
 
     const btnConfig = ref({
       btnLink: true,
-      btnUrl: "https://docs.sakurakoi.top/download",
+      btnUrl: "https://kirara.sakurakoi.top/docs/getting-started",
       btnBg: "#003e8f",
       btnText: "ο(=•ω＜=)ρ⌒☆",
       btnTextColor: "white",

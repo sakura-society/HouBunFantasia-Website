@@ -1,6 +1,6 @@
 <template>
   <div id="title" class="slide header">
-    <img class="logo" src="https://docs.sakurakoi.top/images/logo.svg" alt="" width="80%" height="auto">
+    <img class="logo" src="https://kirara.sakurakoi.top/images/logo.svg" alt="" width="80%" height="auto">
     <a id="slider-1-slide-1-layer-0" class="rs-layer rev-btn rs-pxl-5" href="https://fantia.jp/fanclubs/24531"
       target="_blank">
       <span

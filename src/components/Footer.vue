@@ -62,7 +62,7 @@
             <div class="copyright">
               <div class="copyright">
                 © 2021 - 2022
-                <a href="https://docs.sakurakoi.top" target="_blank">
+                <a href="https://kirara.sakurakoi.top" target="_blank">
                   HoubunFantasiaProductionTeam
                 </a>
                 . All rights reserved.
@@ -102,7 +102,7 @@ export default {
       RelatedLinks: [
         {
           name: "Docs",
-          url: "https://docs.sakurakoi.top",
+          url: "https://kirara.sakurakoi.top",
         },
       ],
     };

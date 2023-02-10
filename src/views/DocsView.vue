@@ -5,7 +5,7 @@
 <script>
 export default {
   created () {
-    window.location.href = "https://docs.sakurakoi.top";
+    window.location.href = "https://kirara.sakurakoi.top";
   },
 }
 </script>
