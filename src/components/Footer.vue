@@ -102,7 +102,7 @@ export default {
       RelatedLinks: [
         {
           name: "Docs",
-          url: "/docs",
+          url: "https://docs.sakurakoi.top",
         },
       ],
     };

@@ -53,11 +53,11 @@ export default {
     return {
       communitys: [
         {
-          name: "QQ 频道",
-          url: "https://pd.qq.com/s/egfs0th8i",
+          name: "QQ群",
+          url: "https://jq.qq.com/?_wv=1027&k=fhrdx0wa",
           ProPho:
             "https://44422.jx1639.com/iefans/images/2022-01-29/61f4b75ed03b9.jpeg",
-          desc: "为中国大陆的用户提供类Discord的社区！"
+          desc: "为中国大陆的用户提供的聊天群聊！"
         },
         {
           name: "樱雪论坛",

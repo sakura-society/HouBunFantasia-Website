@@ -50,7 +50,7 @@
                 <p>
                 </p>
                 <hr class="no_line" style="margin: 0 auto 15px auto">
-                <a class="button  has-icon button_right button_size_2 button_theme" href="/license">
+                <a class="button  has-icon button_right button_size_2 button_theme" href="/about">
                   <span class="button_icon">
                     <i class="fa fa-long-arrow-alt-right" aria-hidden="true">
                     </i>

@@ -34,8 +34,8 @@ export default defineComponent({
         path: "/docs",
       },
       {
-        name: "特别鸣谢",
-        path: "/thanks",
+        name: "赞助&鸣谢",
+        path: "/donate",
       }
     ]);
     const navConfig = ref({
